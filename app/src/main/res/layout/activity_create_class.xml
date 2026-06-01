@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".activities.CreateClassActivity">
+
+    <!-- Guidelines -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gL10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gL50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gL90"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <!-- Título -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Crear clase"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#000"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="@id/gL10"/>
+
+    <!-- Fecha inicio -->
+    <TextView
+        android:id="@+id/tvStartDateText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fecha inicio:"
+        android:textSize="16sp"
+        android:textColor="#444"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        app:layout_constraintStart_toStartOf="@id/gL10"
+        android:layout_marginTop="20dp"/>
+
+    <EditText
+        android:id="@+id/etStartDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:background="@drawable/bg_edit_text"
+        android:focusable="false"
+        android:clickable="true"
+        android:hint="00/00/0000"
+        android:inputType="none"
+        android:textColor="#000"
+        app:layout_constraintTop_toBottomOf="@id/tvStartDateText"
+        app:layout_constraintStart_toStartOf="@id/gL10"
+        app:layout_constraintEnd_toEndOf="@id/gL90"/>
+
+    <!-- Clase única -->
+    <CheckBox
+        android:id="@+id/cbSingleClass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clase única"
+        app:layout_constraintTop_toBottomOf="@id/etStartDate"
+        app:layout_constraintStart_toStartOf="@id/gL10"/>
+
+    <!-- Fecha fin -->
+    <TextView
+        android:id="@+id/tvEndDateText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fecha fin:"
+        android:textSize="16sp"
+        android:textColor="#444"
+        app:layout_constraintTop_toBottomOf="@id/cbSingleClass"
+        app:layout_constraintStart_toStartOf="@id/gL10" />
+
+    <EditText
+        android:id="@+id/etEndDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:focusable="false"
+        android:clickable="true"
+        android:hint="00/00/0000"
+        android:inputType="none"
+        android:textColor="#000"
+        android:background="@drawable/bg_edit_text"
+        app:layout_constraintTop_toBottomOf="@id/tvEndDateText"
+        app:layout_constraintStart_toStartOf="@id/gL10"
+        app:layout_constraintEnd_toEndOf="@id/gL90"/>
+
+    <!-- Hora -->
+    <TextView
+        android:id="@+id/tvTimeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hora:"
+        android:textSize="16sp"
+        android:textColor="#444"
+        app:layout_constraintTop_toBottomOf="@id/etEndDate"
+        app:layout_constraintStart_toStartOf="@id/gL10"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_edit_text"
+        android:padding="12dp"
+        android:text="Seleccionar hora"
+        android:textColor="#000"
+        app:layout_constraintTop_toBottomOf="@id/tvTimeText"
+        app:layout_constraintStart_toStartOf="@id/gL10"
+        app:layout_constraintEnd_toEndOf="@id/gL90"/>
+
+    <!-- Capacidad -->
+    <TextView
+        android:id="@+id/tvCapacityText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Capacidad:"
+        android:textSize="16sp"
+        android:textColor="#444"
+        app:layout_constraintTop_toBottomOf="@id/tvTime"
+        app:layout_constraintStart_toStartOf="@id/gL10"
+        android:layout_marginTop="20dp"/>
+
+    <EditText
+        android:id="@+id/etCapacity"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_edit_text"
+        android:padding="12dp"
+        android:inputType="number"
+        android:hint="Ej: 10"
+        app:layout_constraintTop_toBottomOf="@id/tvCapacityText"
+        app:layout_constraintStart_toStartOf="@id/gL10"
+        app:layout_constraintEnd_toEndOf="@id/gL90"/>
+
+    <LinearLayout
+        android:id="@+id/containerDays"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/etCapacity"
+        app:layout_constraintStart_toStartOf="@id/gL10"
+        app:layout_constraintEnd_toEndOf="@id/gL90"
+        android:layout_marginTop="20dp">
+        <!-- Días de la semana -->
+        <TextView
+            android:id="@+id/tvDaysText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Repetir días para clases recurrentes:"
+            android:textSize="16sp"
+            android:textColor="#444"
+            android:layout_marginTop="20dp"/>
+
+        <LinearLayout
+            android:id="@+id/layoutDays"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+            <CheckBox
+                android:id="@+id/cbMon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="L"/>
+
+            <CheckBox
+                android:id="@+id/cbTue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="M"/>
+
+            <CheckBox
+                android:id="@+id/cbWed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="X"/>
+
+            <CheckBox
+                android:id="@+id/cbThu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="J"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Botones -->
+    <Button
+        android:id="@+id/btBack"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="2dp"
+        android:text="Volver"
+        android:backgroundTint="@color/bluePrimarySoft"
+        android:textColor="@color/textPrimary"
+        app:layout_constraintStart_toStartOf="@id/gL10"
+        app:layout_constraintEnd_toStartOf="@id/gL50"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="24dp"/>
+
+    <Button
+        android:id="@+id/btCreateClass"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:layout_marginStart="2dp"
+        android:text="Crear clase"
+        android:textColor="@color/textPrimary"
+        android:backgroundTint="@color/greenPrimarySoft"
+        app:icon="@drawable/ic_save"
+        app:iconTint="@color/textPrimary"
+        app:layout_constraintStart_toStartOf="@id/gL50"
+        app:layout_constraintEnd_toEndOf="@id/gL90"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="24dp"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

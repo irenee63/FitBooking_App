@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".activities.ClassDetailUserActivity">
+
+    <!-- Guidelines -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gL10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gL50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gL90"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <!-- FECHA -->
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:text=""
+        app:layout_constraintStart_toStartOf="@id/gL10"
+        app:layout_constraintEnd_toEndOf="@id/gL90"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="48dp"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- HORA -->
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:text=""
+        app:layout_constraintStart_toStartOf="@id/gL10"
+        app:layout_constraintEnd_toEndOf="@id/gL90"
+        app:layout_constraintTop_toBottomOf="@id/tvDate"
+        android:layout_marginTop="18dp"
+        android:layout_marginBottom="24dp"/>
+
+    <!-- AFORO -->
+    <TextView
+        android:id="@+id/tvCapacity"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text=""
+        app:layout_constraintStart_toStartOf="@id/gL10"
+        app:layout_constraintEnd_toEndOf="@id/gL90"
+        app:layout_constraintTop_toBottomOf="@id/tvTime"
+        android:layout_marginTop="18dp"
+        android:layout_marginBottom="32dp"/>
+
+    <!-- Botones -->
+    <Button
+        android:id="@+id/btBack"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="2dp"
+        android:text="Volver"
+        android:backgroundTint="@color/bluePrimarySoft"
+        android:textColor="@color/textPrimary"
+        app:layout_constraintStart_toStartOf="@id/gL10"
+        app:layout_constraintEnd_toStartOf="@id/gL50"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="24dp"/>
+
+    <Button
+        android:id="@+id/btReserve"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:layout_marginStart="2dp"
+        android:text="Reservar"
+        android:backgroundTint="@color/greenPrimarySoft"
+        app:icon="@drawable/ic_booking_new"
+        app:iconTint="@color/textPrimary"
+        android:textColor="@color/textPrimary"
+        app:layout_constraintStart_toStartOf="@id/gL50"
+        app:layout_constraintEnd_toEndOf="@id/gL90"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="24dp"/>
+
+    <Button
+        android:id="@+id/btCancel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:layout_marginStart="2dp"
+        android:backgroundTint="@color/redDeleteSoft"
+        android:textColor="@color/textPrimary"
+        android:text="Cancelar "
+        app:icon="@drawable/ic_booking_cancel"
+        app:iconTint="@color/textPrimary"
+        app:layout_constraintStart_toStartOf="@id/gL50"
+        app:layout_constraintEnd_toEndOf="@id/gL90"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="24dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

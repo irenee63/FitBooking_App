@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.MainActivity">
+
+    <!-- Logo Fondo -->
+    <ImageView
+        android:id="@+id/ivLogoBg"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/ic_fitbooking_text"
+        android:alpha="0.12"
+        android:scaleType="fitCenter"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Guidelines -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gL20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.20" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gL80"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.8" />
+
+    <LinearLayout
+        android:id="@+id/loginContainer"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/gL20"
+        app:layout_constraintEnd_toEndOf="@id/gL80">
+
+        <!-- Campos -->
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_height="60dp"
+            android:layout_width="match_parent"
+            android:inputType="text"
+            android:hint="Usuario"
+            android:background="@drawable/bg_edit_text"/>
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="40dp" />
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_height="60dp"
+            android:layout_width="match_parent"
+            android:inputType="text"
+            android:hint="Contraseña"
+            android:background="@drawable/bg_edit_text" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="80dp" />
+
+        <Button
+            android:id="@+id/btnAccept"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Aceptar"
+            android:textColor="@color/textPrimary"
+            android:backgroundTint="@color/bluePrimarySoft"
+            app:layout_constraintEnd_toStartOf="@+id/gL80"
+            app:layout_constraintStart_toStartOf="@+id/gL20"
+            app:layout_constraintTop_toBottomOf="@id/etPassword"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <TextView
+            android:id="@+id/tvForgotPass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¿Has olvidado tu contraseña?"
+            android:textColor="@color/bluePrimarySoft"
+            android:textSize="14sp"
+            android:paddingTop="12dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintTop_toBottomOf="@id/etPassword"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvError"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text=""
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="16sp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@id/gL80"
+            app:layout_constraintStart_toStartOf="@id/gL20"
+            app:layout_constraintTop_toBottomOf="@id/btnAccept"/>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

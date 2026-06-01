@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".activities.UserDetailActivity">
+
+    <!-- Guidelines -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gL10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gL50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gL90"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <ImageButton
+        android:id="@+id/btDeleteUser"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:background="@android:color/transparent"
+        android:padding="6dp"
+        android:src="@drawable/ic_delete"
+        android:contentDescription="Eliminar usuario"
+        android:visibility="gone"
+        app:tint="@android:color/holo_red_dark"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/gL90"
+        android:layout_marginTop="24dp"/>
+
+    <!-- Campos -->
+    <EditText
+        android:id="@+id/etName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:enabled="false"
+        android:hint="Nombre"
+        android:background="@drawable/bg_edit_text"
+        android:padding="12dp"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@id/gL10"
+        app:layout_constraintEnd_toEndOf="@id/gL90"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:enabled="false"
+        android:hint="Email"
+        android:background="@drawable/bg_edit_text"
+        android:padding="12dp"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@id/gL10"
+        app:layout_constraintEnd_toEndOf="@id/gL90"
+        app:layout_constraintTop_toBottomOf="@id/etName" />
+
+    <TextView
+        android:id="@+id/twPassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Contraseña:"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@id/gL10"
+        app:layout_constraintEnd_toEndOf="@id/gL90"
+        app:layout_constraintTop_toBottomOf="@id/etEmail" />
+
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        android:hint="Contraseña"
+        android:background="@drawable/bg_edit_text"
+        android:padding="12dp"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@id/gL10"
+        app:layout_constraintEnd_toEndOf="@id/gL90"
+        app:layout_constraintTop_toBottomOf="@id/twPassword" />
+
+    <TextView
+        android:id="@+id/twBirthday"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Fecha de nacimiento:"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@id/gL10"
+        app:layout_constraintEnd_toEndOf="@id/gL90"
+        app:layout_constraintTop_toBottomOf="@id/etPassword" />
+
+
+    <EditText
+        android:id="@+id/etBirthday"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        android:focusable="false"
+        android:clickable="true"
+        android:hint="00/00/0000"
+        android:background="@drawable/bg_edit_text"
+        android:padding="12dp"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@id/gL10"
+        app:layout_constraintEnd_toEndOf="@id/gL90"
+        app:layout_constraintTop_toBottomOf="@id/twBirthday" />
+
+    <TextView
+        android:id="@+id/twTotalBalance"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Total clases mensuales:"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@id/gL10"
+        app:layout_constraintEnd_toEndOf="@id/gL90"
+        app:layout_constraintTop_toBottomOf="@id/etBirthday" />
+
+    <EditText
+        android:id="@+id/etTotalBalance"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        android:hint="Número total"
+        android:background="@drawable/bg_edit_text"
+        android:padding="12dp"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@id/gL10"
+        app:layout_constraintEnd_toEndOf="@id/gL90"
+        app:layout_constraintTop_toBottomOf="@id/twTotalBalance" />
+
+    <TextView
+        android:id="@+id/twAvailBalance"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Clases pendientes:"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@id/gL10"
+        app:layout_constraintEnd_toEndOf="@id/gL90"
+        app:layout_constraintTop_toBottomOf="@id/etTotalBalance" />
+
+    <EditText
+        android:id="@+id/etAvailBalance"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        android:hint="Número pendiente"
+        android:background="@drawable/bg_edit_text"
+        android:padding="12dp"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@id/gL10"
+        app:layout_constraintEnd_toEndOf="@id/gL90"
+        app:layout_constraintTop_toBottomOf="@id/twAvailBalance" />
+
+    <!-- Botones -->
+    <Button
+        android:id="@+id/btBack"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="2dp"
+        android:text="Volver"
+        android:backgroundTint="@color/bluePrimarySoft"
+        android:textColor="@color/textPrimary"
+        app:layout_constraintStart_toStartOf="@id/gL10"
+        app:layout_constraintEnd_toStartOf="@id/gL50"
+        app:layout_constraintTop_toBottomOf="@id/etAvailBalance" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btEditSave"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="2dp"
+        android:text="Editar"
+        android:textColor="@color/textPrimary"
+        android:backgroundTint="@color/greenPrimarySoft"
+        app:icon="@drawable/ic_user_edit"
+        app:iconTint="@color/textPrimary"
+        app:layout_constraintStart_toStartOf="@id/gL50"
+        app:layout_constraintEnd_toEndOf="@id/gL90"
+        app:layout_constraintTop_toBottomOf="@id/etAvailBalance" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

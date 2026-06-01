@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".activities.CreateUserActivity">
+
+    <!-- Guidelines -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gL10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gL50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gL90"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <!-- Campos -->
+    <EditText
+        android:id="@+id/etName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:hint="Nombre"
+        android:background="@drawable/bg_edit_text"
+        android:padding="12dp"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@id/gL10"
+        app:layout_constraintEnd_toEndOf="@id/gL90"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Email"
+        android:background="@drawable/bg_edit_text"
+        android:padding="12dp"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@id/gL10"
+        app:layout_constraintEnd_toEndOf="@id/gL90"
+        app:layout_constraintTop_toBottomOf="@id/etName" />
+
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Password"
+        android:background="@drawable/bg_edit_text"
+        android:padding="12dp"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@id/gL10"
+        app:layout_constraintEnd_toEndOf="@id/gL90"
+        app:layout_constraintTop_toBottomOf="@id/etEmail" />
+
+    <TextView
+        android:id="@+id/twBirthday"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Fecha de nacimiento:"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@id/gL10"
+        app:layout_constraintEnd_toEndOf="@id/gL90"
+        app:layout_constraintTop_toBottomOf="@id/etPassword" />
+
+    <EditText
+        android:id="@+id/etBirthday"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:focusable="false"
+        android:clickable="true"
+        android:hint="00/00/0000"
+        android:maxLength="10"
+        android:background="@drawable/bg_edit_text"
+        android:padding="12dp"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@id/gL10"
+        app:layout_constraintEnd_toEndOf="@id/gL90"
+        app:layout_constraintTop_toBottomOf="@id/twBirthday" />
+
+    <TextView
+        android:id="@+id/twTotalBalance"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Total clases mensuales:"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@id/gL10"
+        app:layout_constraintEnd_toEndOf="@id/gL90"
+        app:layout_constraintTop_toBottomOf="@id/etBirthday" />
+
+    <EditText
+        android:id="@+id/etTotalBalance"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Clases totales"
+        android:background="@drawable/bg_edit_text"
+        android:padding="12dp"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@id/gL10"
+        app:layout_constraintEnd_toEndOf="@id/gL90"
+        app:layout_constraintTop_toBottomOf="@id/twTotalBalance" />
+
+    <TextView
+        android:id="@+id/twAvailBalance"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Clases pendientes:"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@id/gL10"
+        app:layout_constraintEnd_toEndOf="@id/gL90"
+        app:layout_constraintTop_toBottomOf="@id/etTotalBalance" />
+
+    <EditText
+        android:id="@+id/etAvailBalance"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Clases pentientes"
+        android:background="@drawable/bg_edit_text"
+        android:padding="12dp"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@id/gL10"
+        app:layout_constraintEnd_toEndOf="@id/gL90"
+        app:layout_constraintTop_toBottomOf="@id/twAvailBalance" />
+
+    <!-- Botones -->
+    <Button
+        android:id="@+id/btBack"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="2dp"
+        android:text="Volver"
+        android:backgroundTint="@color/bluePrimarySoft"
+        android:textColor="@color/textPrimary"
+        app:layout_constraintStart_toStartOf="@id/gL10"
+        app:layout_constraintEnd_toStartOf="@id/gL50"
+        app:layout_constraintTop_toBottomOf="@id/etAvailBalance" />
+
+    <Button
+        android:id="@+id/btSave"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:layout_marginStart="2dp"
+        android:text="Guardar"
+        android:textColor="@color/textPrimary"
+        android:backgroundTint="@color/greenPrimarySoft"
+        app:icon="@drawable/ic_save"
+        app:iconTint="@color/textPrimary"
+        app:layout_constraintStart_toStartOf="@id/gL50"
+        app:layout_constraintEnd_toEndOf="@id/gL90"
+        app:layout_constraintTop_toBottomOf="@id/etAvailBalance" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
