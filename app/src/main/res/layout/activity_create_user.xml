@@ -35,7 +35,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:hint="Nombre"
+        android:hint="Nombre completo"
         android:background="@drawable/bg_edit_text"
         android:padding="12dp"
         android:textSize="18sp"
@@ -48,7 +48,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:hint="Email"
+        android:hint="Nombre de usuario"
         android:background="@drawable/bg_edit_text"
         android:padding="12dp"
         android:textSize="18sp"
@@ -153,7 +153,8 @@
         android:textColor="@color/textPrimary"
         app:layout_constraintStart_toStartOf="@id/gL10"
         app:layout_constraintEnd_toStartOf="@id/gL50"
-        app:layout_constraintTop_toBottomOf="@id/etAvailBalance" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="24dp" />
 
     <Button
         android:id="@+id/btSave"
@@ -168,6 +169,7 @@
         app:iconTint="@color/textPrimary"
         app:layout_constraintStart_toStartOf="@id/gL50"
         app:layout_constraintEnd_toEndOf="@id/gL90"
-        app:layout_constraintTop_toBottomOf="@id/etAvailBalance" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="24dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -103,6 +103,7 @@ public class UserDetailActivity extends AppCompatActivity {
 
             if (userId == SessionManager.getInstance().getUserId()) {
                 etPassword.setEnabled(true);
+                btDeleteUser.setVisibility(View.GONE);
             }
         } else {
             etPassword.setEnabled(true);
