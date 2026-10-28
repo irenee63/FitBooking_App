@@ -1,0 +1,63 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:padding="12dp"
+    android:gravity="center_vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tvUserName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textSize="16sp"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:maxLines="1"/>
+
+    <!-- TOGGLEBUTTON 3 ESTADOS -->
+    <com.google.android.material.button.MaterialButtonToggleGroup
+        android:id="@+id/attGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:singleSelection="true">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAbsent"
+            android:text=""
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:textSize="20sp"
+            app:icon="@drawable/ic_attendance_absent"
+            app:iconTint="@color/redDeleteSoft"
+            app:iconGravity="textStart"
+            app:iconPadding="0dp"
+            style="@style/Widget.Material3.Button.OutlinedButton" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnUnknown"
+            android:text=""
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:textSize="20sp"
+            app:icon="@drawable/ic_attendance_unknown"
+            app:iconGravity="textStart"
+            app:iconPadding="0dp"
+            style="@style/Widget.Material3.Button.OutlinedButton" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnPresent"
+            android:text=""
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:textSize="20sp"
+            app:icon="@drawable/ic_attendance_present"
+            app:iconTint="@color/greenPrimarySoft"
+            app:iconGravity="textStart"
+            app:iconPadding="0dp"
+            style="@style/Widget.Material3.Button.OutlinedButton" />
+
+    </com.google.android.material.button.MaterialButtonToggleGroup>
+
+</LinearLayout>

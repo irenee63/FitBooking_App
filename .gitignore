@@ -1,0 +1,19 @@
+#AndroidStudio
+*.iml
+/.idea
+
+#Caché
+.gradle/
+build/
+**/build/
+
+#Configuración local del SDK
+local.properties
+
+#Archivos generados
+.DS_Store
+Thumbs.db
+
+#Archivos temporales
+*.log
+*.tmp
