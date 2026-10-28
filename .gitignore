@@ -1,6 +1,6 @@
 #AndroidStudio
 *.iml
-/.idea
+.idea/
 
 #Caché
 .gradle/
@@ -17,3 +17,6 @@ Thumbs.db
 #Archivos temporales
 *.log
 *.tmp
+
+#Credenciales privadas
+**/db.php
