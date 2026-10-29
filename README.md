@@ -1,8 +1,12 @@
 # FitBooking
+![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
+![Android](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)
+![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
 
-**Aplicación Android para la gestión y reserva de clases.**
+📱 **Aplicación Android para la gestión y reserva de clases.**
 
-##Índice
+## Índice
 - [Título e imagen de portada](#Título-e-imagen-de-portada)
 - [Insignias](#insignias)
 - [Índice](#índice)
@@ -21,7 +25,7 @@ FitBooking es una aplicacion Android orientada a facilitar la gestión de clases
 
 ![Logo FitBooking](img/ic_fitbooking.png)
 
-## Descripción del proyecto
+🖼️## Descripción del proyecto
 
 FitBooking es una aplicación desarrolada como Proyecto final del Grado Superior en Desarrollo de Aplicaciones Multiplataforma (DAM).
 
@@ -29,11 +33,11 @@ Esta aplicación permite organizar clases y gestionar las reservas desde el móv
 
 El proyeecto surge de la necesidad de mejorar la organización de las clases y reservas, evitando depender de mensajes individuales para comunicar cambios o ausencias.
 
-## Objetivo del proyecto
+🎯## Objetivo del proyecto
 
 Desarrollar una aplicación quesimplifique la gestión de clases y sus reservas, centralizando la información y facilitando la organización del centro deportivo.
 
-## Funcionalidades
+✨## Funcionalidades
 
 ### Usuarios
 
@@ -51,7 +55,7 @@ Desarrollar una aplicación quesimplifique la gestión de clases y sus reservas,
 - Consulta de los usuarios inscritos
 - Gestión de la información relacionada con las clases y sus participantes
 
-## Tecnologías utilizadas
+💻## Tecnologías utilizadas
 
 - **Java**: desarrollo de la aplicación Android
 - **Android Studio**: entorno de desarrollo
@@ -61,14 +65,14 @@ Desarrollar una aplicación quesimplifique la gestión de clases y sus reservas,
 - **Gradle**: configuración y compilación del proyecto
 - **Git y GitHub**: control de versiones y alojamiento del código
 
-## Arquitectura
+🏗️## Arquitectura
 
 FitBooking utiliza una arquitectura cliente-servidor. La aplicación Android realiza peticiones HTTP a una API desarrollada en PHP, que procesa las solicitudes y se comunica con la base de datos MySQL.
 
 ![Esquema Arquitectura FitBooking](img/FitBooking_arq.png)
 
 
-## Estructura del proyecto
+📂## Estructura del proyecto
 
 ```text
 FitBooking/
@@ -90,7 +94,7 @@ FitBooking/
 └── README.md
 ```
 
-## Requisitos
+⚙️## Requisitos
 
 Para ejecutar el proyecto se necesita:
 
@@ -100,6 +104,7 @@ Para ejecutar el proyecto se necesita:
 - Un servicio web compatible con PHP
 - Una base de datos MySQL
 
-## Autora
+👩‍💻## Autora
 **Irene Reguero Castro**
+
 Proyecto realizado como trabajo final del Grado Superior en Desarrollo de Aplicaciones Multiplataforma (DAM).
