@@ -19,7 +19,7 @@
 
 FitBooking es una aplicacion Android orientada a facilitar la gestión de clases de un centro deportivo.
 
-![alt text](img/ic_fitbooking.png)
+![Logo FitBooking](img/ic_fitbooking.png)
 
 ## Descripción del proyecto
 
@@ -65,7 +65,7 @@ Desarrollar una aplicación quesimplifique la gestión de clases y sus reservas,
 
 FitBooking utiliza una arquitectura cliente-servidor. La aplicación Android realiza peticiones HTTP a una API desarrollada en PHP, que procesa las solicitudes y se comunica con la base de datos MySQL.
 
-![alt text](img/FitBooking_arq.png)
+![Esquema Arquitectura FitBooking](img/FitBooking_arq.png)
 
 
 ## Estructura del proyecto
