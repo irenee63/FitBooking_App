@@ -3,17 +3,17 @@
 **Aplicación Android para la gestión y reserva de clases.**
 
 ##Índice
-*[Título e imagen de portada](#Título-e-imagen-de-portada)
-*[Insignias](#insignias)
-*[Índice](#índice)
-*[Descripción del proyecto](#descripción-del-proyecto)
-*[Objetivo del proyecto](#objetivo-del-proyecto)
-*[Funcionalidades](#funcionalidades)
-*[Tecnologías utilizadas](#tecnologías-utilizadas)
-*[Arquitectura](#arquitectura)
-*[Estructura del proyecto](#estructura-del-proyecto)
-*[Requisitos](#requisitos)
-*[Autora](#autora)
+- [Título e imagen de portada](#Título-e-imagen-de-portada)
+- [Insignias](#insignias)
+- [Índice](#índice)
+- [Descripción del proyecto](#descripción-del-proyecto)
+- [Objetivo del proyecto](#objetivo-del-proyecto)
+- [Funcionalidades](#funcionalidades)
+- [Tecnologías utilizadas](#tecnologías-utilizadas)
+- [Arquitectura](#arquitectura)
+- [Estructura del proyecto](#estructura-del-proyecto)
+- [Requisitos](#requisitos)
+- [Autora](#autora)
 
 ## Título e imagen de portada
 
@@ -70,6 +70,7 @@ FitBooking utiliza una arquitectura cliente-servidor. La aplicación Android rea
 
 ## Estructura del proyecto
 
+```text
 FitBooking/
 ├── app/
 │   └── src/
@@ -87,6 +88,7 @@ FitBooking/
 ├── gradle.properties
 ├── settings.gradle.kts
 └── README.md
+```
 
 ## Requisitos
 
